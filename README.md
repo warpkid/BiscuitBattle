@@ -9,7 +9,7 @@ Players both take a card from the top of their deck. They then take it in turns 
 ## IPlayer
 An IPlayer is an interface that defines an entity that may take part in the game.
 
-## IMonsterCard
+## IBiscuitCard
 An interface that defines a card that can be included in the deck. It must include top trump style stats, a name, and a description.
 
 ## IGameController
