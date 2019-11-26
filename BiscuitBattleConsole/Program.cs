@@ -21,7 +21,7 @@ namespace BiscuitBattleConsole
         {
             var locator = new ServiceLocator();
             var controller = locator.GetService<IGameController>();
-            var cardFactory = locator.GetService<BaseBiscuitFactory>();
+            var cardCreator = locator.GetService<BaseBiscuitCreator>();
 
             //1. Get the decks for both players
 
@@ -30,8 +30,8 @@ namespace BiscuitBattleConsole
 
             for (int i = 0; i <= 4; i++)
             {
-                humanDeck.Add(cardFactory.GetCard());
-                aiDeck.Add(cardFactory.GetCard());
+                humanDeck.Add(cardCreator.GetCard());
+                aiDeck.Add(cardCreator.GetCard());
             }
 
             //2. Set decks in game controller
