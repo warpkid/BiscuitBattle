@@ -21,7 +21,7 @@ namespace BiscuitBattleConsole
         {
             var locator = new ServiceLocator();
             var controller = locator.GetService<IGameController>();
-            var cardFactory = locator.GetService<BaseBiscuitFactory>();
+            var cardFactory = locator.GetService<BaseBiscuitCreator>();
 
             //1. Get the decks for both players
 

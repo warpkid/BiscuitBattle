@@ -20,7 +20,7 @@ namespace BiscuitBattle.ServiceLocator
             // fill the map
             this._services.Add(typeof(IGameController), new GameController());
             this._services.Add(typeof(IPlayer), new BasicAI());
-            this._services.Add(typeof(BaseBiscuitFactory), new RandomBiscuitCardFactory());
+            this._services.Add(typeof(BaseBiscuitCreator), new RandomBiscuitCardCreator());
         }
 
         public T GetService<T>()
