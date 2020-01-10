@@ -18,16 +18,26 @@ namespace BiscuitBattle.Players
                 Console.WriteLine($"{c} - {stat.Key} \t\t\t {stat.Value}");
                 c++;
             }
-
+            
+            // CM - Added graphical element
+            Console.WriteLine("  _/\\_/\\_/\\_");
+            Console.WriteLine(" |         |");
+            Console.WriteLine(" | (.) (.) |");
+            Console.WriteLine(" |    |    |");
+            Console.WriteLine(" |  \\___/  |");
+            Console.WriteLine(" |_________|");
+            
             var choice = Console.ReadKey().KeyChar.ToString();
 
 
             if (int.TryParse(choice, out int i))
             {
+                // returning the player choice as KVP
                 return (m.Stats.ToList()[i - 1].Key, m.Stats.ToList()[i - 1].Value);
             }
             else
             {
+                // if invalid choice, send defualt response to guarantee round loss
                 Console.WriteLine("Invalid Choice...");
                 DecideAttributeToPlay(m);
             }
