@@ -12,8 +12,7 @@ namespace BiscuitBattle.Players
     {
         public (BiscuitAttribute Attr, int Score) DecideAttributeToPlay(IBiscuitCard m)
         {
-            //we just play the highest attribute we have - simple
-            //pretend to think
+            // CM - pretend to think
             Console.WriteLine("Thinking....");
             Thread.Sleep(1500);
             
@@ -23,6 +22,7 @@ namespace BiscuitBattle.Players
             Console.WriteLine("Maaaannnnn these biscuits taste good!");
             Console.ResetColor();
 
+            // CM - Chooseing random attribute to return (not a very good player!)
             // CM - counting dictionary length (more future proof than manually setting random args) 
             int size = m.Stats.Count;
 

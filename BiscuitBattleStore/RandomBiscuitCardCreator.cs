@@ -8,7 +8,7 @@ namespace BiscuitBattle.Store
         public override IBiscuitCard GetCard()
         {
             var ran = new Random();
-            // extended random range to include two new biscuits (custard cream and random)
+            // CM - extended random range to include two new biscuits (custard cream and random)
             var choose = ran.Next(1, 8);
             switch (choose)
             {
@@ -22,10 +22,10 @@ namespace BiscuitBattle.Store
                     return new BalancedBiscuit();
                 case 5:
                     return new GingernutBiscuit();
-                    // new biscuit case added
+                    // CM - new biscuit case added
                 case 6:
                     return new CustardCreamBiscuit();
-                    /* random biscuit case added - 
+                    /* CM - random biscuit case added - 
                     Only one random biscuit added per game */
                 case 7:
                     return new RandomBiscuitBuilder();

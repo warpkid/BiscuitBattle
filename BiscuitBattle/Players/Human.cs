@@ -32,12 +32,10 @@ namespace BiscuitBattle.Players
 
             if (int.TryParse(choice, out int i))
             {
-                // returning the player choice as KVP
                 return (m.Stats.ToList()[i - 1].Key, m.Stats.ToList()[i - 1].Value);
             }
             else
             {
-                // if invalid choice, send defualt response to guarantee round loss
                 Console.WriteLine("Invalid Choice...");
                 DecideAttributeToPlay(m);
             }
