@@ -39,7 +39,10 @@ namespace BiscuitBattleConsole
             controller.PlayerTwoDeck = aiDeck;
 
             controller.PlayerOne = new Human();
-            controller.PlayerTwo = new BasicAI();
+            
+            // CM - changing to CrazyAI
+            // controller.PlayerTwo = new BasicAI();
+            controller.PlayerTwo = new CrazyAI();
 
             //3. Start the game
             controller.Begin();
