@@ -20,6 +20,16 @@ namespace BiscuitBattle.Game
 
         public void Begin()
         {
+            // CM - added game title banner
+            Console.WriteLine(" ________________________________ ");
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("|                                |");
+            Console.WriteLine("|          Welcome to            |");
+            Console.WriteLine("|        Biscuit Battle!         |");
+            Console.WriteLine("|________________________________|");
+            Console.ResetColor();
+            
             PlayerStates = new List<PlayerState>
             {
                 new PlayerState() { Player = PlayerOne, Deck = PlayerOneDeck, Label = "Player One" },
@@ -27,6 +37,7 @@ namespace BiscuitBattle.Game
             };
 
             var turnCounter = 1;
+
 
             while (PlayerStates.All(state => state.Deck.Count() != 0))
             {
@@ -54,7 +65,7 @@ namespace BiscuitBattle.Game
                 }
                 else if (comparerScore > score)
                 {
-                    Console.WriteLine($"{ defendingPlayer.Label} WINS ROUND with a score of {comparerScore} compared to {score}" );
+                    Console.WriteLine($"{ defendingPlayer.Label} WINS ROUND with a score of {comparerScore} compared to {score}");
                     defendingPlayer.Deck.Insert(0, activePlayer.CurrentCard);
                     activePlayer.Deck.Remove(activePlayer.CurrentCard);
                 }

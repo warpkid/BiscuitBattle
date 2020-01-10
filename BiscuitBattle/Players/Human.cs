@@ -18,7 +18,15 @@ namespace BiscuitBattle.Players
                 Console.WriteLine($"{c} - {stat.Key} \t\t\t {stat.Value}");
                 c++;
             }
-
+            
+            // CM - Added graphical element
+            Console.WriteLine("  _/\\_/\\_/\\_");
+            Console.WriteLine(" |         |");
+            Console.WriteLine(" | (.) (.) |");
+            Console.WriteLine(" |    |    |");
+            Console.WriteLine(" |  \\___/  |");
+            Console.WriteLine(" |_________|");
+            
             var choice = Console.ReadKey().KeyChar.ToString();
 
 
